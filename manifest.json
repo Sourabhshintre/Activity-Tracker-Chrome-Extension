@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Tab Time Tracker",
+    "description": "Track time spent on each tab and URL with the Tab Time Tracker extension for better productivity and browsing habit management",
+    "version": "0.1.1",
+    "icons": {
+      "128": "app/assets/images/icon.png"
+    },
+    "action": {
+      "default_title": "Tab Time Tracker",
+      "default_popup": "app/views/extension/popup.html"
+    },
+    "background": {
+      "service_worker": "app/views/extension/background.js"
+    },
+    "permissions": ["tabs", "storage"]
+  }

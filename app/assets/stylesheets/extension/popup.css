@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --accentCol: grey;
+    --shadowCol: #e0e0e0;
+    --mainCol: #ECC649;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+	width: 300px;
+    height: 450px;
+    background-color: var(--accentCol);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-box{
+    width: 230px;
+    margin-top: 1.4rem;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 2px var(--shadowCol);
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#toggleBtn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 110px;
+    background: var(--mainCol);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.clearBtn{
+    margin-top: 15px;
+    padding: 10px 30px;
+    background: var(--mainCol);
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.data-box,
+.modal-content{
+    top: 5rem;
+    position: absolute;
+    width: 275px;
+    transition: 0s;
+    justify-content: center;
+    align-items: center;
+}
+#closed{
+    display: none;
+}
+#clearHistoryBtn{
+    display: none;
+    position: absolute;
+    bottom: 15;
+}
+table{
+    display: block;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+thead{
+    width: calc(100% - 16px);
+}
+tbody{
+    display: block;
+    max-height: 270px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* width: calc(100% + 16px); */
+}
+thead, tr {
+    display:table;
+    table-layout:fixed;
+    width:100%;
+}
+table thead tr th,
+table tbody tr td{
+    width: 90px;
+    color: black;
+    text-align: center;
+    border-right: 1px solid var(--accentCol);
+} 
+table thead tr th:nth-child(2),
+table tbody tr td:nth-child(2){
+    width: 86px;
+}
+table tr th {
+  text-align: center;
+  border-top: solid 1px var(--accentCol);
+}
+table tr th:first-child,
+table tr td:first-child,
+table tr th:nth-child(2),
+table tr td:nth-child(2){
+  border-left: 1px solid var(--accentCol);
+  border-right: 1px solid black;
+}
+
+table tr td:last-child,
+table tr td:first-child,
+table tr td:nth-child(2){
+  border-bottom: 1px solid var(--accentCol);
+  border-top: 1px solid black;
+}
+th {
+    font-size: 15px;
+    padding: 8px 14px 8px 14px;
+}
+td {
+    font-size: 12px;
+    padding: 10px 5px 10px 5px;
+}
+a{
+    text-decoration: none;
+}
+/* a:focus,
+a:hover{
+    text-decoration: none;
+} */
+.tab-true{
+    color: var(--mainCol);
+}
+.tab-false{
+    color: black;
+}
+.time-td{
+    display: flex;
+    justify-content: center;
+}
+.info-icon{
+    height: 100%;
+    width: 1rem;
+    margin-left: 2px;
+}
+/* Modal CSS */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.175); /* Black w/ opacity */
+}
+.modal-container{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.modal-content {
+    width: 270px;
+    background-color: #fefefe;
+    padding-top: 5px;
+    border: 1px solid var(--accentCol);
+    border-radius: .5rem;
+}
+.modal-close{
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 3.25rem;
+    margin-left: 15rem;
+}
+.modal-close:hover,
+.modal-close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
